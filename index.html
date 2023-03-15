@@ -22,42 +22,42 @@
         <div class="items-container">
           <div class="items-coke">
             <a class="img-coke" href="#">
-              <img  src="img/coke.png" alt="" />
+              <img src="img/coke.png" alt="" />
               <p>original_coke</p>
               <button>1000원</button>
             </a>
           </div>
           <div class="items-coke">
             <a class="img-coke" href="#">
-              <img  src="img/coke.png" alt="" />
+              <img src="img/coke.png" alt="" />
               <p>original_coke</p>
               <button>1000원</button>
             </a>
           </div>
           <div class="items-coke">
             <a class="img-coke" href="#">
-              <img  src="img/coke-yellow.png" alt="" />
+              <img src="img/coke-yellow.png" alt="" />
               <p>yellow_coke</p>
               <button>1000원</button>
             </a>
           </div>
           <div class="items-coke">
             <a class="img-coke" href="#">
-              <img  src="img/coke-blue.png" alt="" />
+              <img src="img/coke-blue.png" alt="" />
               <p>blue_coke</p>
               <button>1000원</button>
             </a>
           </div>
           <div class="items-coke">
             <a class="img-coke" href="#">
-              <img  src="img/coke-green.png" alt="" />
+              <img src="img/coke-green.png" alt="" />
               <p>green_coke</p>
               <button>1000원</button>
             </a>
           </div>
           <div class="items-coke">
             <a class="img-coke" href="#">
-              <img  src="img/coke-orange.png" alt="" />
+              <img src="img/coke-orange.png" alt="" />
               <p>orange_coke</p>
               <button>1000원</button>
             </a>
@@ -66,10 +66,14 @@
         <div class="balance-container">
           <div class="balance-cash">
             <div class="balance-input">
-                잔액  :              
-                <div class="blance">1000원</div>
+              잔액 :
+              <div class="blance">1000원</div>
             </div>
-            <input></input>
+            <input
+              class="input-balance"
+              type="text"
+              placeholder="입금액 입력"
+            />
           </div>
           <div class="btn-container">
             <button class="btn-return">거스름돈 반환</button>
@@ -79,10 +83,21 @@
 
         <div class="storage-container">
           <div class="storage-cash">
-            <div class="storage">획득</div> 
+            <div class="storage">
+              <div class="img-list-container">
+                <img class="img-list" src="./img/coke.png" alt="" />
+                <p>original_coke</p>
+                <p>1</p>
+              </div>
+              <div class="img-list-container">
+                <img class="img-list" src="./img/coke.png" alt="" />
+                <p>original_coke</p>
+                <p>2</p>
+              </div>
+            </div>
           </div>
 
-           <div class="btn-container">
+          <div class="btn-container">
             <button class="btn-storage">획득</button>
           </div>
         </div>
@@ -90,12 +105,16 @@
 
       <div class="detail-wrap">
         <div>
-          <div>소지금</div>
+          <div>
+            소지금
+            <div class="blance">25,000원</div>
+          </div>
         </div>
         <div>
           <div>획득한 음료</div>
-          <div>획득한 음료</div>
+          <div class="get-drink"></div>
         </div>
+        <div>총금액 :</div>
       </div>
     </main>
   </body>

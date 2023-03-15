@@ -8,12 +8,20 @@ h1,
 p {
   margin: 0;
 }
+input,
+button {
+  padding: 0;
+}
 button {
   /* padding: initial; */
   /* border: none; */
 }
 img {
   margin-top: 0;
+}
+.img-list {
+  width: 18px;
+  height: 33px;
 }
 /*=================== header================== */
 .header-wrap {
@@ -51,7 +59,7 @@ img {
   height: 545px;
   width: 360px;
 
-  background-color: red;
+  border: 1px solid black;
 }
 
 /*=================== main -> coke-items================== */
@@ -76,6 +84,8 @@ img {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+
+  text-decoration: none;
 }
 /*=================== main -> balance-container================== */
 
@@ -87,30 +97,42 @@ img {
 }
 .balance-cash {
   width: 200px;
+
   display: flex;
   flex-direction: column;
   /* justify-content: space-around; */
 }
 .btn-container {
-  width: 94px;
   display: flex;
   margin-left: 12px;
   margin-right: 12px;
   flex-direction: column;
-  justify-content: space-around;
+  /* justify-content: space-around; */
+}
+.btn-container button {
+  background-color: white;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .btn-return {
-  /* margin-bottom: 5px; */
+  width: 94px;
+  height: 33px;
+  margin-bottom: 11px;
+  box-sizing: border-box;
   font-size: 13px;
   white-space: nowrap;
-  /* box-sizing: border-box; */
 }
 .balance-input {
+  height: 33px;
   margin-bottom: 11px;
+  background-color: palevioletred;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.blance {
-  float: right;
+.input-balance {
+  height: 33px;
+  box-sizing: border-box;
 }
 /*=================== main -> storage-container================== */
 .storage-container {
@@ -128,12 +150,24 @@ img {
   width: 200px;
   height: 106px;
   display: flex;
+  flex-direction: column;
 }
 .storage {
-  background-color: aqua;
+  border: 1px solid black;
 }
 .btn-storage {
   width: 94px;
   height: 100%;
   /* height: 106px; */
+}
+.img-list-container {
+  display: flex;
+}
+/*=================== detail-wrap ================== */
+
+.get-drink {
+  height: 364px;
+  width: 306px;
+  border: 1px solid black;
+  box-sizing: border-box;
 }
