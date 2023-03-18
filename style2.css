@@ -13,6 +13,7 @@ p {
 input,
 button {
   padding: 0;
+  font-family: "Noto Sans KR", sans-serif;
 }
 
 img {
@@ -25,6 +26,12 @@ img {
 a {
   text-decoration: none;
   color: black;
+}
+p {
+  color: #333333;
+}
+input::placeholder {
+  color: #bdbdbd;
 }
 /*=================== header================== */
 .header-wrap {
@@ -65,7 +72,7 @@ a {
   /* align-items: center; */
   justify-content: center;
 }
-.gird-container {
+.grid-container {
   display: grid;
   grid-template-areas:
     "g g h"
@@ -117,7 +124,6 @@ a {
   height: 130px;
   width: 94px;
   text-align: center;
-  /* border: 1px solid #dadada; */
   border-radius: 15px;
   box-sizing: border-box;
 }
@@ -130,8 +136,7 @@ a {
   box-sizing: border-box;
 }
 .balance-input,
-.input-balance,
-.img-list-container {
+.input-balance {
   width: 200px;
   height: 33px;
   padding: 6px;
@@ -145,6 +150,17 @@ a {
   justify-content: center;
 
   text-decoration: none;
+  box-sizing: border-box;
+}
+.items-coke:nth-child(1),
+.items-coke:nth-child(5) {
+  border: 3px solid #6327fe;
+  border-radius: 10px;
+}
+.selected {
+  /* border: 3px solid #6327fe;
+  border-radius: 10px; */
+  /* padding: 1px; */
 }
 .img-coke p {
   font-size: 9px;
@@ -161,11 +177,13 @@ a {
   border: none;
 }
 .img-coke p,
-.img-coke button,
-.img-coke img {
+.img-coke button {
   margin-bottom: 7px;
 }
-
+.img-coke img {
+  padding-top: 11px;
+  margin-bottom: 3px;
+}
 .items-coke-soldout {
   position: relative;
 }
@@ -221,23 +239,22 @@ a {
   color: white;
   border: none;
 }
-.img-list-container {
-  background-color: #eae8fe;
-  overflow-y: scroll;
+
+.list-standard-container::-webkit-scrollbar,
+.drink-list-container::-webkit-scrollbar {
+  width: 4px;
 }
 
-.img-list-container::-webkit-scrollbar {
-  width: 5px;
-}
-
-.img-list-container::-webkit-scrollbar-thumb {
+.list-standard-container::-webkit-scrollbar-thumb,
+.drink-list-container::-webkit-scrollbar-thumb {
   height: 30%;
   background: white;
 
   border-radius: 10px;
 }
 
-.img-list-container::-webkit-scrollbar-track {
+.list-standard-container::-webkit-scrollbar-track,
+.drink-list-container::-webkit-scrollbar-track {
   background: #eae8fe;
 }
 .list-standard {
@@ -246,8 +263,9 @@ a {
   border-radius: 5px;
   align-items: center;
   justify-content: space-between;
-  margin-top: 6px;
-  margin-bottom: 6px;
+  margin: 6px;
+}
+.list-standard-container {
 }
 .img-list-standard {
   display: flex;
@@ -269,9 +287,9 @@ a {
   height: 30px;
   border: 1px solid black;
   margin-right: 8px;
-  font-weight: bold;
+  font-size: 14px;
 }
-.gird-container button,
+.grid-container button,
 .items-coke {
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
 }
@@ -322,27 +340,48 @@ a {
   margin-top: 13px;
   margin-bottom: 6px;
   border-radius: 10px;
+  padding: 6px;
+  display: flex;
+  flex-direction: column;
 }
+.drink-list-container {
+  overflow-y: scroll;
+}
+.img-list-container {
+  display: flex;
+  flex-direction: column;
+  padding: 6px;
+  background-color: #eae8fe;
+}
+.list-standard-container {
+  overflow-y: scroll;
+}
+
 .total-price {
   display: flex;
   justify-content: flex-end;
 
   margin-right: 30px;
+
+  font-size: 12px;
 }
 
 .balance,
-.btn-return {
+.btn-storage {
   font-weight: bold;
 }
 
 .space {
   width: 360px;
-  height: 20px;
+  height: 18px;
   background-color: #eae8fe;
 }
 
-@media (width < 680px) {
+@media (width < 776px) {
   .wrapper {
     flex-direction: column;
+  }
+  .img-logo {
+    width: 360px;
   }
 }
