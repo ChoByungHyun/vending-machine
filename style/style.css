@@ -182,9 +182,6 @@ input::placeholder {
   padding-top: 11px;
   margin-bottom: 3px;
 }
-.items-coke-soldout {
-  position: relative;
-}
 .sold-out {
   display: flex;
   align-items: center;
@@ -196,12 +193,7 @@ input::placeholder {
   position: absolute;
   border-radius: 10px;
 }
-.sold-out img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
-}
+
 /*=================== main -> balance-container================== */
 
 .balance-container {
@@ -263,8 +255,6 @@ input::placeholder {
   justify-content: space-between;
   margin: 6px;
 }
-.list-standard-container {
-}
 .img-list-standard {
   display: flex;
   justify-content: center;
@@ -310,6 +300,8 @@ input::placeholder {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  margin-bottom: 18px;
 }
 .order-wrap {
   width: 360px;
@@ -372,11 +364,6 @@ input::placeholder {
 }
 .txt-get-drink {
   font-size: 14px;
-}
-.space {
-  width: 360px;
-  height: 18px;
-  background-color: #eae8fe;
 }
 
 @media (width < 776px) {
