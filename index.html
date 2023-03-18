@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>vending-machine</title>
     <link rel="stylesheet" href="style2.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header>
@@ -27,7 +33,10 @@
               <button>1000원</button>
             </a>
           </div>
-          <div class="items-coke item-grid2">
+          <div class="items-coke-soldout items-coke item-grid2">
+            <div class="sold-out">
+              <img src="img/soldout.png" alt="sold-out" />
+            </div>
             <a class="img-coke" href="#">
               <img src="img/coke.png" alt="" />
               <p>original_coke</p>
@@ -67,7 +76,7 @@
         <div class="gird-container">
           <div class="balance-input item-grid7 items-input">
             잔액 :
-            <div class="balance">1000원</div>
+            <div class="balance">1,000원</div>
           </div>
           <button class="btn-return item-grid8 items-input">
             거스름돈 반환
@@ -103,67 +112,70 @@
       </div>
 
       <div class="detail-wrap">
-        <div class="balance-input my-money">
-          소지금 :
-          <div class="balance">25,000원</div>
-        </div>
-        <div class="get-drink">
-          <div>획득한 음료</div>
-          <div class="get-drink-list img-list-container">
-            <div class="list-standard">
-              <div class="img-list-standard">
-                <img class="img-list" src="./img/coke.png" alt="" />
-                <p>original_coke</p>
-              </div>
-              <div class="img-list-label">1</div>
-            </div>
-            <div class="list-standard">
-              <div class="img-list-standard">
-                <img class="img-list" src="./img/coke.png" alt="" />
-                <p>original_coke</p>
-              </div>
-              <div class="img-list-label">2</div>
-            </div>
-            <div class="list-standard">
-              <div class="img-list-standard">
-                <img class="img-list" src="./img/coke.png" alt="" />
-                <p>original_coke</p>
-              </div>
-              <div class="img-list-label">3</div>
-            </div>
-            <div class="list-standard">
-              <div class="img-list-standard">
-                <img class="img-list" src="./img/coke.png" alt="" />
-                <p>original_coke</p>
-              </div>
-              <div class="img-list-label">4</div>
-            </div>
-            <div class="list-standard">
-              <div class="img-list-standard">
-                <img class="img-list" src="./img/coke.png" alt="" />
-                <p>original_coke</p>
-              </div>
-              <div class="img-list-label">1</div>
-            </div>
-            <div class="list-standard">
-              <div class="img-list-standard">
-                <img class="img-list" src="./img/coke.png" alt="" />
-                <p>original_coke</p>
-              </div>
-              <div class="img-list-label">1</div>
-            </div>
-            <div class="list-standard">
-              <div class="img-list-standard">
-                <img class="img-list" src="./img/coke.png" alt="" />
-                <p>original_coke</p>
-              </div>
-              <div class="img-list-label">1</div>
-            </div>
+        <div class="money-wrap">
+          <div class="balance-input my-money">
+            소지금 :
+            <div class="balance">25,000원</div>
           </div>
         </div>
-        <div class="total-price">
-          총금액 :
-          <div>9,000원</div>
+        <div class="space"></div>
+        <div class="order-wrap">
+          <div class="get-drink">
+            <div>획득한 음료</div>
+
+            <div class="get-drink-list img-list-container">
+              <div class="list-standard">
+                <div class="img-list-standard">
+                  <img class="img-list" src="./img/coke.png" alt="" />
+                  <p>original_coke</p>
+                </div>
+                <div class="img-list-label">1</div>
+              </div>
+              <div class="list-standard">
+                <div class="img-list-standard">
+                  <img class="img-list" src="./img/coke.png" alt="" />
+                  <p>original_coke</p>
+                </div>
+                <div class="img-list-label">2</div>
+              </div>
+              <div class="list-standard">
+                <div class="img-list-standard">
+                  <img class="img-list" src="./img/coke.png" alt="" />
+                  <p>original_coke</p>
+                </div>
+                <div class="img-list-label">2</div>
+              </div>
+              <div class="list-standard">
+                <div class="img-list-standard">
+                  <img class="img-list" src="./img/coke.png" alt="" />
+                  <p>original_coke</p>
+                </div>
+                <div class="img-list-label">2</div>
+              </div>
+              <div class="list-standard">
+                <div class="img-list-standard">
+                  <img class="img-list" src="./img/coke.png" alt="" />
+                  <p>original_coke</p>
+                </div>
+                <div class="img-list-label">2</div>
+              </div>
+              <div class="list-standard">
+                <div class="img-list-standard">
+                  <img class="img-list" src="./img/coke.png" alt="" />
+                  <p>original_coke</p>
+                </div>
+                <div class="img-list-label">2</div>
+              </div>
+              <div class="list-standard">
+                <div class="img-list-standard">
+                  <img class="img-list" src="./img/coke.png" alt="" />
+                  <p>original_coke</p>
+                </div>
+                <div class="img-list-label">2</div>
+              </div>
+            </div>
+          </div>
+          <div class="total-price">총금액 : 9,000원</div>
         </div>
       </div>
     </main>
