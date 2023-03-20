@@ -1,10 +1,10 @@
+/*=================== style ================== */
+
 body {
   background-color: #eae8fe;
-  /* height: 100vh; */
   box-sizing: border-box;
   font-family: "Noto Sans KR", sans-serif;
 }
-
 body,
 h1,
 p {
@@ -33,6 +33,31 @@ p {
 input::placeholder {
   color: #bdbdbd;
 }
+.balance,
+.btn-storage,
+.txt-get-drink {
+  font-weight: bold;
+}
+/*=================== scroll-bar================== */
+
+.list-standard-container::-webkit-scrollbar,
+.drink-list-container::-webkit-scrollbar {
+  width: 4px;
+}
+
+.list-standard-container::-webkit-scrollbar-thumb,
+.drink-list-container::-webkit-scrollbar-thumb {
+  height: 50%;
+  background: white;
+
+  border-radius: 10px;
+}
+
+.list-standard-container::-webkit-scrollbar-track,
+.drink-list-container::-webkit-scrollbar-track {
+  background: #eae8fe;
+}
+
 /*=================== header================== */
 .header-wrap {
   display: flex;
@@ -45,7 +70,7 @@ input::placeholder {
 }
 /*=================== main================== */
 .wrapper {
-  min-height: calc(100vh - 172px);
+  min-height: calc(100vh - 258px);
 
   display: flex;
   justify-content: center;
@@ -69,7 +94,6 @@ input::placeholder {
   grid-template-areas:
     "a b c"
     "d e f";
-  /* align-items: center; */
   justify-content: center;
 }
 .grid-container {
@@ -80,7 +104,6 @@ input::placeholder {
     "k k l"
     "k k l";
   justify-content: center;
-  /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
 }
 .item-grid1 {
   grid-area: a;
@@ -129,7 +152,6 @@ input::placeholder {
 }
 .items-input {
   /*공통 속성임. */
-
   border: 1px solid #dadada;
   border-radius: 5px;
   margin: 12px 12px 0 0;
@@ -230,30 +252,15 @@ input::placeholder {
   border: none;
 }
 
-.list-standard-container::-webkit-scrollbar,
-.drink-list-container::-webkit-scrollbar {
-  width: 4px;
-}
-
-.list-standard-container::-webkit-scrollbar-thumb,
-.drink-list-container::-webkit-scrollbar-thumb {
-  height: 30%;
-  background: white;
-
-  border-radius: 10px;
-}
-
-.list-standard-container::-webkit-scrollbar-track,
-.drink-list-container::-webkit-scrollbar-track {
-  background: #eae8fe;
-}
 .list-standard {
   display: flex;
+  height: 46px;
   background-color: white;
   border-radius: 5px;
   align-items: center;
   justify-content: space-between;
   margin: 6px;
+  box-sizing: border-box;
 }
 .img-list-standard {
   display: flex;
@@ -283,7 +290,7 @@ input::placeholder {
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
 }
 
-/*=================== main -> balance-container================== */
+/*=================== detail-wrap ================== */
 
 .detail-wrap {
   display: flex;
@@ -324,6 +331,8 @@ input::placeholder {
   box-sizing: border-box;
 }
 .get-drink-list {
+  display: flex;
+  flex-direction: column;
   height: 364px;
   width: 306px;
   box-sizing: border-box;
@@ -332,11 +341,13 @@ input::placeholder {
   margin-bottom: 6px;
   border-radius: 10px;
   padding: 6px;
-  display: flex;
-  flex-direction: column;
+}
+.drink-list-container,
+.list-standard-container {
+  overflow-y: scroll;
 }
 .drink-list-container {
-  overflow-y: scroll;
+  /* min-height: 200%; */
 }
 .img-list-container {
   display: flex;
@@ -344,33 +355,43 @@ input::placeholder {
   padding: 6px;
   background-color: #eae8fe;
 }
-.list-standard-container {
-  overflow-y: scroll;
-}
 
 .total-price {
   display: flex;
   justify-content: flex-end;
 
   margin-right: 30px;
-
   font-size: 12px;
 }
 
-.balance,
-.btn-storage,
-.txt-get-drink {
-  font-weight: bold;
-}
 .txt-get-drink {
   font-size: 14px;
 }
 
-@media (width < 776px) {
+/*=================== 반응형 처리 ================== */
+
+@media (width < 740px) {
+  body {
+    background-color: white;
+  }
   .wrapper {
     flex-direction: column;
+    margin-bottom: 50px;
+    gap: 0;
   }
   .img-logo {
-    width: 360px;
+    width: 166px;
+    height: 71px;
+  }
+  .money-wrap,
+  .order-wrap {
+    justify-content: flex-start;
+  }
+  .input-balance::placeholder {
+    text-align: right;
+  }
+  .sold-out img {
+    position: relative;
+    top: -20px;
   }
 }
